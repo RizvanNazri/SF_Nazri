@@ -23,7 +23,7 @@ $white: rgba(255, 255, 255, 1);
 	font-family: 'YesevaOne-Regular';
 	src: url('../fonts/YesevaOne-Regular.eot');
 	src: local('☺'), url('../fonts/YesevaOne-Regular.woff') format('woff'), url('../fonts/YesevaOne-Regular.ttf') format('truetype'), url('../fonts/YesevaOne-Regular.svg') format('svg');
-	font-weight: normal;
+	font-weight: 200;
 	font-style: normal;
 }
 
@@ -45,6 +45,21 @@ a {
     color: $white; 
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'YesevaOne-Regular', serif;
+}
+
+button {
+    color: $white;
+    text-transform: uppercase;
+    padding: 13px 33px;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    font-style: italic;
+    font-size: 11px;
+}
+
 .container {
     max-width: 1095px;
     margin: 0 auto;
@@ -63,8 +78,6 @@ a {
 
 .logo {
     align-self: center;
-    // text-transform: uppercase;
-    // margin: 36px 0;
     &__link {
         color: $sand;
     }
@@ -79,7 +92,7 @@ a {
         list-style-type: none;
         justify-content: space-around;
         &_link {
-            transition: all 0.5s ease;
+            transition: all 0.3s ease;
         }
         &_link:hover {
             color: $sand;
@@ -88,26 +101,52 @@ a {
 }
 
 .contact {
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
-    // margin-top: 10px;
     &__phone {
         color: $sand;
         border-bottom: 1px solid $sand;
-        // align-self: end;
         margin-right: 45px;
     }
     &__callback {
-        color: $white;
-        text-transform: uppercase;
-        padding: 13px 33px;
-        cursor: pointer;
         background-color: $sand;
-        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-        border: none;
-        border-radius: 2px;
-        font-style: italic;
+        box-shadow: 0 8px 10px rgba(227, 184, 115, 0.2);
+        transition: all 0.3s ease;
+        &:hover {
+            box-shadow: 0 12px 18px rgba(233, 210, 174, 0.2);
+        }
     }
 }
 
+.main {
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/main-bg.jpg);
+    &__content {
+        padding: 194px 0 208px 50px;
+    }
+    &__title {
+        font-size: 40px;
+        text-transform: uppercase;
+        & span {
+            color: $sand;
+        }
+    }
+    &__text {
+        font-size: 22px;
+        padding: 20px 515px 30px 0;
+    }
+}
+
+.btn-cost {
+    margin-right: 20px;
+}
+
+.btn-cost, .btn-submit {
+    background-color: transparent;
+    border: 1px solid $white;
+    transition: all 0.3s ease;
+    &:hover {
+        box-shadow: 0 8px 10px rgba(227, 184, 115, 0.2);
+        background-color: $sand;
+    }
+}
